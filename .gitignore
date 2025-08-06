@@ -7,3 +7,6 @@ __pycache__/
 *.pyo
 *.pyd
 *.py[cod]
+
+# Streamlit secrets
+.streamlit/secrets.toml
