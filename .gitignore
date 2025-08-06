@@ -1,0 +1,9 @@
+# Environment variable files (API keys, secrets)
+.env
+
+# Python temporary files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.py[cod]
