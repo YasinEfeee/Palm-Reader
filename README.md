@@ -2,6 +2,8 @@
 
 A fun and mystical AI-powered palm reading application that analyzes palm images using Google's Gemini AI model. Get instant palm readings in both English and Turkish!
 
+🌐 **Live Demo**: [Try it out!](https://palm-reader-ai.streamlit.app/)
+
 ## 🌟 Features
 
 - 📸 Upload a palm image or use your device's camera
@@ -54,10 +56,10 @@ streamlit run PalmReader.py
 
 ## 📝 Requirements
 
-- streamlit
-- Pillow
-- python-dotenv
-- google-generativeai
+- streamlit>=1.31.0
+- Pillow>=10.0.0
+- python-dotenv>=1.0.0
+- google-generativeai>=0.3.0
 
 ## 📜 License
 
@@ -67,4 +69,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Powered by Google's Gemini AI
 - Built with Streamlit
-- Icons by Twemoji
