@@ -10,7 +10,7 @@ load_dotenv()
 api_key = st.secrets["GEMINI_API_KEY"]
 
 # Configure Gemini
-genai.configure(api_key)
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.set_page_config(page_title="AI Palm Reader", page_icon="🔮")
