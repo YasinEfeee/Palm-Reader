@@ -24,7 +24,7 @@ A fun and mystical AI-powered palm reading application that analyzes palm images
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/palm-reader.git
+   git clone https://github.com/YasinEfeee/Palm-Reader.git
    cd palm-reader
    ```
 
