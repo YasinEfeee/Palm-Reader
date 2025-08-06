@@ -33,7 +33,7 @@ A fun and mystical AI-powered palm reading application that analyzes palm images
    pip install -r requirements.txt
    ```
 
-3. Create a `.env` file in the project root and add your Gemini API key:
+3. Create a `secrets.toml` file in the project root and add your Gemini API key:
    ```
    GEMINI_API_KEY=your_api_key_here
    ```
