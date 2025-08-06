@@ -62,7 +62,7 @@ if image_data:
                     try:
                         eng_text = full_output.split("- 🇺🇸 English:")[1].split("- 🇹🇷 Turkish:")[0].strip()
                         tr_text = full_output.split("- 🇹🇷 Turkish:")[1].strip()
-                    except:
+                    except:  # noqa: E722
                         eng_text = full_output
                 else:
                     eng_text = full_output  # fallback in case formatting breaks
