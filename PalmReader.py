@@ -88,13 +88,13 @@ if image_data:
                 response_model=PalmResult,
             )
             if response.suitable:
-                eng_text = response.english
+                en_text = response.english
                 tr_text = response.turkish
 
                 st.markdown("## 🧙‍♂️ Your Palm Explanation | Fal Açıklamanız")
 
                 st.markdown("### English Explanation")
-                st.write(eng_text)
+                st.write(en_text)
 
                 st.markdown("### Türkçe Açıklama")
                 st.write(tr_text)
