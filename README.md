@@ -1,71 +1,96 @@
 # 🔮 AI Palm Reader
 
-A fun and mystical AI-powered palm reading application that analyzes palm images using Google's Gemini AI model. Get instant palm readings in both English and Turkish!
+A mystical AI-powered palm reading application that analyzes palm images using advanced vision language models. Get instant, personalized palm readings in both English and Turkish with poetic, mystical insights about your personality, life path, and future opportunities.
 
 🌐 **Live Demo**: [Try it out!](https://palm-reader-ai.streamlit.app/)
 
 ## 🌟 Features
 
-- 📸 Upload a palm image or use your device's camera
-- 🔍 AI-powered palm analysis using Google's Gemini model
-- 🌍 Bilingual support (English and Turkish)
-- 🎨 Clean and intuitive Streamlit interface
-- 📱 Mobile-friendly design
+- 📸 **Dual Input Methods**: Upload palm images or capture them directly with your device's camera
+- 🤖 **AI-Powered Analysis**: Uses LiteLLM with structured outputs via Instructor for reliable palm reading generation
+- 🌍 **Bilingual Support**: Simultaneous readings in English and Turkish with mystical, poetic tone
+- 🎨 **Elegant Interface**: Clean, responsive Streamlit design optimized for both desktop and mobile
+- 🧙‍♂️ **Mystical Insights**: Comprehensive readings covering personality traits, life path, emotions, and predictions
+- ✨ **Smart Detection**: Intelligent palm detection that works even with partially visible or unclear hand images
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- Google Gemini API key
-- Required Python packages (install via `pip install -r requirements.txt`)
+- **Python 3.12 or higher**
+- **uv package manager** (recommended but optional)
+- **LiteLLM compatible API key** from any supported provider (OpenAI, Anthropic, Google, etc.)
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/YasinEfeee/Palm-Reader.git
-   cd palm-reader
+   cd Palm-Reader
    ```
 
-2. Install the required packages:
+2. **Install dependencies:**
+
+   Using `uv` (recommended):
+   ```bash
+   uv sync
+   ```
+
+   Or using `pip`:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Create a `secrets.toml` file in the project root and add your Gemini API key:
+3. **Configure your API credentials:**
+
+   Create a `.streamlit/secrets.toml` file in the project root:
+   ```toml
+   LLM_API_KEY = "your_api_key_here"
+   LLM_MODEL = "your_model_name_here"  # it must support vision capabilities
    ```
-   GEMINI_API_KEY=your_api_key_here
-   ```
 
-   Alternatively, you can set up your API key in Streamlit secrets when deploying.
+   **Supported models**: Any vision-capable model from LiteLLM's provider list is supported.
+   - See [LiteLLM Models](https://models.litellm.ai) for full list.
 
-### Running Locally
+### Running the Application
 
-Run the Streamlit app:
+**Local Development:**
+```bash
+uv run streamlit run PalmReader.py
+```
+
+**Alternative (if uv not available):**
 ```bash
 streamlit run PalmReader.py
 ```
 
+The app will be available at `http://localhost:8501`
+
 ## 🤖 How It Works
 
-1. Choose your preferred input method: upload an image or use your camera
-2. Take a clear photo of your palm or upload an existing image
-3. Click "Read My Palm" and let the AI analyze your palm lines
-4. Receive your personalized palm reading in both English and Turkish
+The application combines modern AI technology with mystical palm reading traditions:
 
-## 📝 Requirements
+1. **Image Capture**: Choose between uploading an existing palm image or capturing one directly using your device's camera
+2. **AI Analysis**: The image is processed by a vision-language model using structured outputs via the Instructor library
+3. **Palm Detection**: Smart detection system identifies hands even in partially visible or unclear images
+4. **Mystical Generation**: AI generates comprehensive palm readings covering:
+   - **Personality Traits**: Hidden strengths and character insights
+   - **Life Path**: Future opportunities and personal growth
+   - **Emotional Nature**: Relationship patterns and emotional depth
+   - **Mystical Predictions**: Inspiring forecasts about your journey
+5. **Dual Language Output**: Receive your reading in both English and Turkish with poetic, mystical language
 
-- streamlit>=1.31.0
-- Pillow>=10.0.0
-- python-dotenv>=1.0.0
-- google-generativeai>=0.3.0
+## 🏗️ Technical Architecture
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Frontend**: Streamlit with responsive design and camera integration
+- **AI Integration**: LiteLLM for multi-provider LLM access
+- **Structured Output**: Instructor (Pydantic) for reliable response parsing
+- **Image Processing**: PIL for image handling and base64 encoding
+- **Dependencies**: Modern Python stack with uv package management
 
 ## 🙏 Acknowledgments
 
-- Powered by Google's Gemini AI
-- Built with Streamlit
+- **[LiteLLM](https://github.com/BerriAI/litellm)** - Universal LLM API for seamless model integration
+- **[Instructor](https://github.com/jxnl/instructor)** - Structured outputs for reliable AI responses  
+- **[Streamlit](https://streamlit.io/)** - Beautiful web apps for machine learning and data science
+- **[Pydantic](https://pydantic.dev/)** - Data validation using Python type annotations
